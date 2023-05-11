@@ -1,10 +1,8 @@
 
 la app está realizada en node express 
 
-
 npm i
 npm run dev
-
 
 funciona en http://localhost:3000/resumen/2019-12-01?dias=2
 para dias=2 tenemos de resultado
