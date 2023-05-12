@@ -1,6 +1,6 @@
 
 la app está realizada en node express 
-
+```sh
 npm i
 npm run dev
 
@@ -45,3 +45,4 @@ para dias=5
   "nocompraron": 1876,
   "compraMasAlta": 30479.76
 }
+```
