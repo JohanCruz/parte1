@@ -16,8 +16,7 @@ router.get('/resumen/:date',(req, res) =>{
         let rangeOfTime = 0;
         let total = 0; 
         
-        while(rangeOfTime <= parseInt(req.query.dias) || parseInt(req.query.dias) === 0 ){
-            
+        do {            
             const slideDate = initialDate.getDate() < 10 ?
              "0" + initialDate.getDate().toString() : initialDate.getDate().toString()
             
@@ -43,15 +42,11 @@ router.get('/resumen/:date',(req, res) =>{
             for (const subtotal in creditCardPurchases) {
                 total += creditCardPurchases[subtotal];
             }        
-
-            if(parseInt(req.query.dias) === 0){
-                break
-            }
             
             rangeOfTime += 1;
             initialDate.setDate(initialDate.getDate() +  1);
             
-        }
+        }while(rangeOfTime <= parseInt(req.query.dias))
 
         return {  
             "total": total, 
