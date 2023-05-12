@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/resumen/:date',(req, res) =>{
     async function fetchSales() { 
 
-        let initialDate = new Date(req.params.date+"T00:00:00.000"); 
+        let initialDate = new Date(req.params.date + "T00:00:00.000"); 
         let settings = { method: "Get" };
         let notBuied = 0;
         let buyHigher = 0;
