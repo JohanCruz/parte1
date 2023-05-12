@@ -23,8 +23,7 @@ router.get('/resumen/:date',(req, res) =>{
             let url = "https://apirecruit-gjvkhl2c6a-uc.a.run.app/compras/" +
              initialDate.getFullYear() + "-" + initialDate.getMonth() + "-" + slideDate;
             
-            const response = await fetch(url, settings);
-                    
+            const response = await fetch(url, settings);                    
             const clients = await response.json(); 
 
             clients.forEach(function(client) {  
