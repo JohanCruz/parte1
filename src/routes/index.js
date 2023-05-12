@@ -25,7 +25,7 @@ router.get('/resumen/:date',(req, res) =>{
             
             const response = await fetch(url, settings);
                     
-            let clients = await response.json(); 
+            const clients = await response.json(); 
 
             clients.forEach(function(client) {  
                 if('tdc' in client){
